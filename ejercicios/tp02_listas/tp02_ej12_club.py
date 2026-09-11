@@ -30,9 +30,19 @@ def dar_de_baja(socios, ingresos):
     socio_eliminado = socios.pop(indice)
     cantidad_ingresos_eliminados = ingresos.pop(indice)
     informar_ingresos(socios, ingresos)
-    return socios, ingresos, cantidad_ingresos_eliminados
+    return socio_eliminado,cantidad_ingresos_eliminados
 
 
-socios, ingresos = cargar_socios()
-socios, ingresos, eliminados = dar_de_baja(socios, ingresos)
-print(f"Se eliminaron {eliminados} ingresos")
+def main():
+    """ PUNTO A """
+    socios, ingresos = cargar_socios()
+
+    """ PUNTO B """
+    socios, eliminados = dar_de_baja(socios, ingresos)
+    print(f"Se eliminaron {eliminados} ingresos")
+    socios_post_eliminado = socios
+    ingresos_post_eliminados = eliminados
+    print(f"El socio {socios_post_eliminado} ingreso {ingresos_post_eliminados} veces")
+
+if __name__ == "__main__":
+    main()
