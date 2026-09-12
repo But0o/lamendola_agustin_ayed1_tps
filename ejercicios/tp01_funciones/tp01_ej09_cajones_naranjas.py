@@ -39,7 +39,6 @@ def main():
     cantidad = int(input("Ingrese la cantidad de naranjas que se cosecho: "))
     naranjas_buenas, naranjas_jugo, peso_total = clasificacion_naranja(cantidad)
     cantidad_cajones,sobrante = calcular_cajones(naranjas_buenas)
-    calcular_camiones(peso_total)
     print(f"Se llenaron {cantidad_cajones} cajones")
     print(f"Quedaron {naranjas_jugo} naranajas para jugo")
     print(f"Sobraron {sobrante} naranjas")
