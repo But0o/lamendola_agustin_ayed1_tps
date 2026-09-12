@@ -1,4 +1,14 @@
-def carda_pacientes():
+def carda_pacientes() -> tuple[list[int], list[int]]:
+    """
+    contrato
+
+    Registra a los pacientes que llegan a la clínica, separándolos
+    según si vinieron por una urgencia o con turno, hasta que se
+    indica que no hay más pacientes para cargar.
+
+    pre: no recibe parametros, se ingresan por teclado numeros de afiliado (enteros de 4 digitos) y el tipo de atencion (0 urgencia, 1 turno), finalizando con -1
+    post: devuelve una tupla con la lista de afiliados atendidos por urgencia y la lista de afiliados atendidos por turno, en el orden en que llegaron
+    """
     urgencia = []
     turno = []
 
@@ -13,7 +23,16 @@ def carda_pacientes():
 
     return urgencia,turno
 
-def busqueda_afiliado(resultados):
+def busqueda_afiliado(resultados: tuple[list[int], list[int]]) -> None:
+    """
+    contrato
+
+    Permite buscar, por número de afiliado, cuántas veces esa
+    persona fue atendida por urgencia y cuántas por turno.
+
+    pre: resultados es una tupla con la lista de afiliados atendidos por urgencia y la lista de afiliados atendidos por turno
+    post: por cada numero de afiliado ingresado por teclado, informa cuantas veces fue atendido por urgencia y por turno; finaliza al ingresar -1
+    """
     buscar_afiliado = int(input("Ingrese un numero de afiliado: "))
     while buscar_afiliado != -1:
         atendido_turno = 0
@@ -30,7 +49,7 @@ def busqueda_afiliado(resultados):
         buscar_afiliado = int(input("Ingrese un numero de afiliado(ingresar -1 para salir): "))
 
 
-def main():
+def main() -> None:
     """Puto A"""
     resultados = carda_pacientes()
     urgente = resultados[0]

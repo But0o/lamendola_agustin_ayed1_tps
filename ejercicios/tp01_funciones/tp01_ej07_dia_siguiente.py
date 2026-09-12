@@ -1,4 +1,14 @@
-def dia_siguiente(dia,mes,anio):
+def dia_siguiente(dia: int, mes: int, anio: int) -> tuple[int, int, int]:
+    """
+    contrato
+
+    Toma una fecha y calcula cuál es el día siguiente, pasando
+    correctamente al mes o al año que corresponde cuando la fecha
+    llega al último día de un mes.
+
+    pre: dia, mes y anio forman una fecha valida
+    post: devuelve la tupla (dia, mes, anio) correspondiente al dia siguiente de la fecha dada
+    """
     dias = 0
 
     if mes in (1, 3, 5, 7, 8, 10, 12):
@@ -22,12 +32,30 @@ def dia_siguiente(dia,mes,anio):
         mes = mes + 1
     return dia, mes, anio
 
-def sumar_dias(dia,mes,anio,n):
+def sumar_dias(dia: int, mes: int, anio: int, n: int) -> tuple[int, int, int]:
+    """
+    contrato
+
+    Toma una fecha y le suma una cantidad de días indicada, avanzando
+    día por día hasta llegar a la fecha final.
+
+    pre: dia, mes y anio forman una fecha valida, n es un numero entero positivo
+    post: devuelve la tupla (dia, mes, anio) resultante de sumarle n dias a la fecha dada
+    """
     for i in range(n):
         dia,mes,anio = dia_siguiente(dia,mes,anio)
     return dia,mes,anio
 
-def diferencia_dias(dia,mes,anio,dia2,mes2,anio2):
+def diferencia_dias(dia: int, mes: int, anio: int, dia2: int, mes2: int, anio2: int) -> int:
+    """
+    contrato
+
+    Cuenta cuántos días hay entre dos fechas, avanzando de a un día
+    desde la primera hasta llegar a la segunda.
+
+    pre: (dia, mes, anio) y (dia2, mes2, anio2) son fechas validas
+    post: devuelve la cantidad de dias que hay entre ambas fechas
+    """
     contador = 0
     fecha1 = dia,mes,anio
     fecha2= dia2,mes2,anio2
@@ -38,7 +66,7 @@ def diferencia_dias(dia,mes,anio,dia2,mes2,anio2):
     return contador
 
 
-def main():
+def main() -> None:
     print("----- MENÚ DE FECHAS -----")
     print("1. Calcular día siguiente")
     print("2. Sumar N días a una fecha")

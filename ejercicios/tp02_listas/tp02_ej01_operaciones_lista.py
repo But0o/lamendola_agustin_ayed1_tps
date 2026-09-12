@@ -1,6 +1,15 @@
 import random as rn
 
-def cargar_lista():
+def cargar_lista() -> list[int]:
+    """
+    contrato
+
+    Genera una lista con una cantidad al azar de números de cuatro
+    dígitos, también elegidos al azar.
+
+    pre: no recibe parametros
+    post: devuelve una lista con una cantidad al azar (entre 10 y 99) de numeros de cuatro digitos generados al azar
+    """
     lista = []
 
     cantidad = rn.randint(10,99)
@@ -11,7 +20,16 @@ def cargar_lista():
 
     return lista
 
-def producto_lista(lista):
+def producto_lista(lista: list[int]) -> int:
+    """
+    contrato
+
+    Multiplica entre sí todos los números de una lista y devuelve el
+    resultado.
+
+    pre: lista es una lista de numeros
+    post: devuelve el producto de todos los elementos de la lista
+    """
 
     producto = 1
 
@@ -20,7 +38,16 @@ def producto_lista(lista):
 
     return producto
 
-def eliminar_valor(lista,n):
+def eliminar_valor(lista: list[int], n: int) -> list[int]:
+    """
+    contrato
+
+    Recorre una lista y devuelve una copia sin ninguna aparición de
+    un valor determinado.
+
+    pre: lista es una lista de numeros, n es el valor a eliminar
+    post: devuelve una nueva lista sin ninguna aparicion del valor n, sin usar listas auxiliares para el filtrado
+    """
     i = 0
     lista_eliminada = lista.copy()
 
@@ -31,7 +58,16 @@ def eliminar_valor(lista,n):
             i += 1
     return lista_eliminada
 
-def lista_capicua(lista):
+def lista_capicua(lista: list) -> bool:
+    """
+    contrato
+
+    Verifica si una lista se lee igual de adelante hacia atrás que
+    de atrás hacia adelante.
+
+    pre: lista es una lista cualquiera
+    post: devuelve True si la lista es capicua (se lee igual de izquierda a derecha que de derecha a izquierda), False en caso contrario
+    """
     for i in range(len(lista)):
         if lista[i] != lista[i-1]:
             return False
@@ -39,7 +75,7 @@ def lista_capicua(lista):
             return True
 
 
-def main():
+def main() -> None:
     # Punto A
     lista = [50, 17, 91, 17, 50]  #lista de pruebas
     #lista = cargar_lista()

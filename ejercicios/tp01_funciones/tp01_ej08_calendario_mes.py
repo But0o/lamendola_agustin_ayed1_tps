@@ -1,4 +1,13 @@
-def diadelasemana(dia,mes,anio):
+def diadelasemana(dia: int, mes: int, anio: int) -> int:
+    """
+    contrato
+
+    Calcula qué día de la semana corresponde a una fecha dada,
+    devolviendo un número donde el domingo es el día 0.
+
+    pre: dia, mes y anio forman una fecha valida
+    post: devuelve el dia de la semana de la fecha (0 = domingo, 1 = lunes, ..., 6 = sabado)
+    """
     if mes < 3:
         mes = mes + 10
         anio = anio - 1
@@ -11,7 +20,17 @@ def diadelasemana(dia,mes,anio):
         diasem = diasem + 7
     return diasem
 
-def calendario(mes,anio):
+def calendario(mes: int, anio: int) -> None:
+    """
+    contrato
+
+    Muestra por pantalla el calendario completo de un mes y año
+    determinados, ubicando cada día debajo del día de la semana que
+    le corresponde.
+
+    pre: mes es un entero entre 1 y 12, anio es un entero positivo
+    post: imprime por pantalla el calendario del mes y anio indicados, comenzando la semana en domingo
+    """
     dias = 0
 
     if mes in (1, 3, 5, 7, 8, 10, 12):
@@ -45,7 +64,7 @@ def calendario(mes,anio):
             dia_semana = 0
 
 
-def main():
+def main() -> None:
     print("----- CALENDARIO -----")
 
     mes = int(input("Ingrese el mes (1-12): "))
@@ -63,6 +82,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-

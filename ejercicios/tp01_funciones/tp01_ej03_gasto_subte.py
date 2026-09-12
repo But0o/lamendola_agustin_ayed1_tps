@@ -1,6 +1,16 @@
 TARIFA_MAXIMA = 1684
 
-def calcular_valor(viajes):
+def calcular_valor(viajes: int) -> float:
+    """
+    contrato
+
+    Calcula cuánto gastó una persona en el mes viajando en subte,
+    según la cantidad de viajes que realizó. Cuantos más viajes hace,
+    mayor es el descuento que se le aplica sobre la tarifa máxima.
+
+    pre: viajes es un numero entero positivo, representa la cantidad de viajes realizados en el mes
+    post: devuelve el total gastado en el mes aplicando el descuento correspondiente segun la cantidad de viajes
+    """
     if viajes <= 20:
         precio_pasaje = TARIFA_MAXIMA
     elif viajes <= 30:
@@ -18,7 +28,7 @@ def calcular_valor(viajes):
     total = precio_pasaje * viajes
     return total
 
-def main():
+def main() -> None:
     viajes = int(input("Ingresa el total de viajes del mes: "))
 
     while viajes <= 0:

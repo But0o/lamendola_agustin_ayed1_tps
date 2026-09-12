@@ -1,4 +1,15 @@
-def fecha_valida(dia,mes,anio):
+def fecha_valida(dia: int, mes: int, anio: int) -> bool:
+    """
+    contrato
+
+    Revisa si el día, el mes y el año indicados forman una fecha que
+    realmente existe en el calendario. Tiene en cuenta que cada mes
+    tiene una cantidad distinta de días y que los años bisiestos
+    agregan un día extra a febrero.
+
+    pre: dia, mes y anio son numeros enteros
+    post: devuelve True si dia, mes y anio forman una fecha valida (contemplando años bisiestos), False en caso contrario
+    """
     if anio <= 0:
         return False
     if mes < 1:
@@ -24,7 +35,7 @@ def fecha_valida(dia,mes,anio):
 
     return True
 
-def main():
+def main() -> None:
     dia = int(input("Ingresar un dia: "))
     mes = int(input("Ingresar un mes: "))
     anio = int(input("Ingresar un año: "))
