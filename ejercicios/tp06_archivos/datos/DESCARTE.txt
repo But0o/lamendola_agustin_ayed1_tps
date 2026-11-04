@@ -1,0 +1,9 @@
+﻿GONZÁLEZ, Raúl
+Acá tenés una lista en el mismo formato Apellido, Nombre. Copiala tal cual en tu nombres.csv:
+Smith, John
+Müller, Hans
+García, Pedro
+Tanaka, Yuki
+Silva, João
+Ivanov, Dmitri
+GONZÁLEZ, Raúl
