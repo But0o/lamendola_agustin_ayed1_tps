@@ -1,0 +1,6 @@
+Futbol
+1.85
+Basquet
+2.05
+Gimnasia
+1.52
