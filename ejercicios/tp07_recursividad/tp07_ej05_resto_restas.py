@@ -2,10 +2,10 @@ def resto(dividendo: int, divisor: int) -> int:
     """
     contrato
 
-    Calcula el resto de la division entera de dos numeros, utilizando
+    Calcula el resto de la division de dos numeros enteros, utilizando
     restas sucesivas.
 
-    pre: dividendo es un entero no negativo y divisor es un entero positivo
+    pre: dividendo es un entero mayor o igual que 0 y divisor es un entero mayor que 0
     post: devuelve el resto de dividir dividendo por divisor
     """
     if dividendo < divisor:
