@@ -5,7 +5,7 @@ def producto(a: int, b: int) -> int:
     Calcula el producto de dos numeros enteros por sumas sucesivas.
 
     pre: a y b son numeros enteros
-    post: devuelve a * b, calculado sumando a, b veces
+    post: devuelve a * b, calculado sumando b veces el valor de a
     """
     if b == 0:
         return 0
