@@ -4,7 +4,7 @@ def suma_naturales(n: int) -> int:
 
     Calcula la suma de los N primeros numeros naturales.
 
-    pre: n es un numero entero no negativo
+    pre: n es un numero entero mayor o igual que 0
     post: devuelve 1 + 2 + ... + n (0 si n es 0)
     """
     if n == 0:
